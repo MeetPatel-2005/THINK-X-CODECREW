@@ -1,0 +1,148 @@
+[
+  {
+    "userId": "23DCS082",
+    "scholarshipId": "SCH-CHARU-001",
+    "name": "CHARUSAT Merit Scholarship",
+    "eligibilityStatus": "eligible",
+    "amount": 50000,
+    "appliedOn": "2024-07-10",
+    "status": "approved",
+    "documents": [
+      "Previous Semester Marksheet",
+      "Income Certificate",
+      "Aadhar Card"
+    ]
+  },
+
+  {
+    "userId": "23DCS041",
+    "scholarshipId": "SCH-GJ-002",
+    "name": "MYSY Scholarship (Gujarat Govt)",
+    "eligibilityStatus": "eligible",
+    "amount": 40000,
+    "appliedOn": "2024-07-15",
+    "status": "pending",
+    "documents": [
+      "12th Marksheet",
+      "Income Certificate",
+      "Bank Passbook"
+    ]
+  },
+
+  {
+    "userId": "23ME052",
+    "scholarshipId": "SCH-GJ-003",
+    "name": "EBC Scholarship",
+    "eligibilityStatus": "eligible",
+    "amount": 35000,
+    "appliedOn": "2024-07-18",
+    "status": "approved",
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Fee Receipt"
+    ]
+  },
+
+  {
+    "userId": "22EC031",
+    "scholarshipId": "SCH-GJ-004",
+    "name": "SC Category Scholarship",
+    "eligibilityStatus": "eligible",
+    "amount": 60000,
+    "appliedOn": "2024-07-20",
+    "status": "approved",
+    "documents": [
+      "Caste Certificate",
+      "Bonafide Certificate",
+      "Income Certificate"
+    ]
+  },
+
+  {
+    "userId": "21CE014",
+    "scholarshipId": "SCH-CHARU-005",
+    "name": "University Sports Scholarship",
+    "eligibilityStatus": "not_eligible",
+    "amount": 20000,
+    "appliedOn": "2024-07-12",
+    "status": "rejected",
+    "documents": [
+      "Sports Certificate",
+      "Marksheet"
+    ]
+  },
+
+  {
+    "userId": "23IT067",
+    "scholarshipId": "SCH-GJ-006",
+    "name": "Minority Community Scholarship",
+    "eligibilityStatus": "eligible",
+    "amount": 45000,
+    "appliedOn": "2024-07-22",
+    "status": "approved",
+    "documents": [
+      "Minority Certificate",
+      "Income Certificate",
+      "Bank Passbook"
+    ]
+  },
+
+  {
+    "userId": "22IT034",
+    "scholarshipId": "SCH-GJ-007",
+    "name": "Post Matric Scholarship",
+    "eligibilityStatus": "eligible",
+    "amount": 30000,
+    "appliedOn": "2024-07-25",
+    "status": "pending",
+    "documents": [
+      "Previous Marksheet",
+      "Fee Receipt",
+      "Income Certificate"
+    ]
+  },
+
+  {
+    "userId": "23DCS055",
+    "scholarshipId": "SCH-CHARU-008",
+    "name": "Need-Based Financial Aid",
+    "eligibilityStatus": "eligible",
+    "amount": 25000,
+    "appliedOn": "2024-07-28",
+    "status": "pending",
+    "documents": [
+      "Income Certificate",
+      "Guardian Declaration",
+      "Fee Receipt"
+    ]
+  },
+
+  {
+    "userId": "21ME019",
+    "scholarshipId": "SCH-CHARU-009",
+    "name": "Top Ranker Award",
+    "eligibilityStatus": "eligible",
+    "amount": 40000,
+    "appliedOn": "2024-07-05",
+    "status": "approved",
+    "documents": [
+      "Merit Certificate",
+      "Previous Marksheet"
+    ]
+  },
+
+  {
+    "userId": "22EC045",
+    "scholarshipId": "SCH-GJ-010",
+    "name": "ST Category Scholarship",
+    "eligibilityStatus": "not_eligible",
+    "amount": 55000,
+    "appliedOn": "2024-07-30",
+    "status": "rejected",
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate"
+    ]
+  }
+]

@@ -1,0 +1,247 @@
+[
+
+  {
+    "userId": "APP-2025-014",
+    "applicationId": "CHARU25-APP-0014",
+    "admissionStatus": "confirmed",
+    "entranceScore": 92.4,
+    "cutoffRank": 1850,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-15",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-16",
+        "verified": true
+      },
+      {
+        "docType": "JEE Scorecard",
+        "uploadedAt": "2025-06-17",
+        "verified": true
+      },
+      {
+        "docType": "School Leaving Certificate",
+        "uploadedAt": "2025-06-18",
+        "verified": true
+      }
+    ],
+    "counselingRound": 2
+  },
+
+  {
+    "userId": "APP-2025-021",
+    "applicationId": "CHARU25-APP-0021",
+    "admissionStatus": "pending",
+    "entranceScore": 78.6,
+    "cutoffRank": 7420,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-20",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-21",
+        "verified": false
+      }
+    ],
+    "counselingRound": 3
+  },
+
+  {
+    "userId": "APP-2025-032",
+    "applicationId": "CHARU25-APP-0032",
+    "admissionStatus": "rejected",
+    "entranceScore": 61.2,
+    "cutoffRank": 14250,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-10",
+        "verified": true
+      }
+    ],
+    "counselingRound": 4
+  },
+
+  {
+    "userId": "APP-2025-045",
+    "applicationId": "CHARU25-APP-0045",
+    "admissionStatus": "confirmed",
+    "entranceScore": 88.9,
+    "cutoffRank": 2650,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-12",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-13",
+        "verified": true
+      },
+      {
+        "docType": "GUJCET Scorecard",
+        "uploadedAt": "2025-06-14",
+        "verified": true
+      },
+      {
+        "docType": "Caste Certificate",
+        "uploadedAt": "2025-06-15",
+        "verified": true
+      }
+    ],
+    "counselingRound": 1
+  },
+
+  {
+    "userId": "APP-2025-051",
+    "applicationId": "CHARU25-APP-0051",
+    "admissionStatus": "pending",
+    "entranceScore": 73.4,
+    "cutoffRank": 8950,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-22",
+        "verified": true
+      },
+      {
+        "docType": "Income Certificate",
+        "uploadedAt": "2025-06-23",
+        "verified": false
+      }
+    ],
+    "counselingRound": 3
+  },
+
+  {
+    "userId": "APP-2025-067",
+    "applicationId": "CHARU25-APP-0067",
+    "admissionStatus": "confirmed",
+    "entranceScore": 95.1,
+    "cutoffRank": 920,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-05",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-06",
+        "verified": true
+      },
+      {
+        "docType": "JEE Scorecard",
+        "uploadedAt": "2025-06-07",
+        "verified": true
+      },
+      {
+        "docType": "Domicile Certificate",
+        "uploadedAt": "2025-06-08",
+        "verified": true
+      }
+    ],
+    "counselingRound": 1
+  },
+
+  {
+    "userId": "APP-2025-074",
+    "applicationId": "CHARU25-APP-0074",
+    "admissionStatus": "rejected",
+    "entranceScore": 58.9,
+    "cutoffRank": 15800,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-11",
+        "verified": false
+      }
+    ],
+    "counselingRound": 5
+  },
+
+  {
+    "userId": "APP-2025-081",
+    "applicationId": "CHARU25-APP-0081",
+    "admissionStatus": "confirmed",
+    "entranceScore": 84.7,
+    "cutoffRank": 3520,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-18",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-19",
+        "verified": true
+      },
+      {
+        "docType": "GUJCET Scorecard",
+        "uploadedAt": "2025-06-20",
+        "verified": true
+      }
+    ],
+    "counselingRound": 2
+  },
+
+  {
+    "userId": "APP-2025-093",
+    "applicationId": "CHARU25-APP-0093",
+    "admissionStatus": "pending",
+    "entranceScore": 69.5,
+    "cutoffRank": 10240,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-25",
+        "verified": true
+      },
+      {
+        "docType": "Transfer Certificate",
+        "uploadedAt": "2025-06-26",
+        "verified": false
+      }
+    ],
+    "counselingRound": 4
+  },
+
+  {
+    "userId": "APP-2025-108",
+    "applicationId": "CHARU25-APP-0108",
+    "admissionStatus": "confirmed",
+    "entranceScore": 90.2,
+    "cutoffRank": 2100,
+    "documentsSubmitted": [
+      {
+        "docType": "10th Marksheet",
+        "uploadedAt": "2025-06-09",
+        "verified": true
+      },
+      {
+        "docType": "12th Marksheet",
+        "uploadedAt": "2025-06-10",
+        "verified": true
+      },
+      {
+        "docType": "JEE Scorecard",
+        "uploadedAt": "2025-06-11",
+        "verified": true
+      },
+      {
+        "docType": "Income Certificate",
+        "uploadedAt": "2025-06-12",
+        "verified": true
+      }
+    ],
+    "counselingRound": 1
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "userId": "23DCS082",
+    "title": "Semester 6 Registration Reminder",
+    "message": "Please complete your semester 6 registration on ERP portal before 25 January 2025.",
+    "category": "academic",
+    "createdAt": "2025-01-18T09:00:00",
+    "isRead": true
+  },
+
+  {
+    "userId": "23DCS041",
+    "title": "Pending Fee Payment",
+    "message": "Your semester fee of ₹26,000 is pending. Please clear dues to avoid late penalty.",
+    "category": "finance",
+    "createdAt": "2025-01-20T10:30:00",
+    "isRead": false
+  },
+
+  {
+    "userId": "23ME052",
+    "title": "Hostel Fee Due",
+    "message": "Please pay your hostel fees for Semester 6 before 30 January 2025.",
+    "category": "hostel",
+    "createdAt": "2025-01-21T11:15:00",
+    "isRead": true
+  },
+
+  {
+    "userId": "22EC031",
+    "title": "Backlog Exam Registration Open",
+    "message": "Backlog exam registration is open till 5 February 2025. Register through ERP.",
+    "category": "examination",
+    "createdAt": "2025-01-25T14:00:00",
+    "isRead": false
+  },
+
+  {
+    "userId": "21CE014",
+    "title": "Placement Drive – Adani Group",
+    "message": "Adani Group campus drive scheduled on 10 February 2025. Eligible students must register.",
+    "category": "placement",
+    "createdAt": "2025-01-27T16:45:00",
+    "isRead": true
+  },
+
+  {
+    "userId": "23IT067",
+    "title": "Scholarship Approved",
+    "message": "Your Minority Community Scholarship has been approved. Amount will be credited soon.",
+    "category": "scholarship",
+    "createdAt": "2025-01-29T09:20:00",
+    "isRead": false
+  },
+
+  {
+    "userId": "22IT034",
+    "title": "Library Book Overdue",
+    "message": "One issued library book is overdue. Please return it to avoid fine.",
+    "category": "library",
+    "createdAt": "2025-02-01T13:10:00",
+    "isRead": true
+  },
+
+  {
+    "userId": "23DCS055",
+    "title": "Internal Marks Correction Window",
+    "message": "Submit internal marks correction request before 3 February 2025.",
+    "category": "academic",
+    "createdAt": "2025-02-02T10:00:00",
+    "isRead": false
+  },
+
+  {
+    "userId": "21ME019",
+    "title": "Transport Pass Renewal",
+    "message": "Your transport pass will expire on 10 February 2025. Please renew it.",
+    "category": "transport",
+    "createdAt": "2025-02-04T15:30:00",
+    "isRead": true
+  },
+
+  {
+    "userId": "APP-2025-014",
+    "title": "Admission Confirmed",
+    "message": "Congratulations! Your admission for B.Tech 2025 batch has been confirmed.",
+    "category": "admission",
+    "createdAt": "2025-02-06T12:00:00",
+    "isRead": false
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "userId": "23DCS082",
+    "name": "Malay Patel",
+    "role": "student",
+    "email": "malay.patel23@charusat.edu.in",
+    "phone": "9876543210",
+    "department": "Computer Science & Engineering",
+    "program": "B.Tech",
+    "semester": 6,
+    "admissionYear": 2023,
+    "status": "active"
+  },
+  {
+    "userId": "23DCS041",
+    "name": "Harsh Shah",
+    "role": "student",
+    "email": "harsh.shah23@charusat.edu.in",
+    "phone": "9898123456",
+    "department": "Computer Science & Engineering",
+    "program": "B.Tech",
+    "semester": 6,
+    "admissionYear": 2023,
+    "status": "active"
+  },
+  {
+    "userId": "23ME052",
+    "name": "Ravi Solanki",
+    "role": "student",
+    "email": "ravi.solanki23@charusat.edu.in",
+    "phone": "9723456789",
+    "department": "Mechanical Engineering",
+    "program": "B.Tech",
+    "semester": 6,
+    "admissionYear": 2023,
+    "status": "active"
+  },
+  {
+    "userId": "22EC031",
+    "name": "Kunal Trivedi",
+    "role": "student",
+    "email": "kunal.trivedi22@charusat.edu.in",
+    "phone": "9825098765",
+    "department": "Electronics & Communication",
+    "program": "B.Tech",
+    "semester": 8,
+    "admissionYear": 2022,
+    "status": "active"
+  },
+  {
+    "userId": "21CE014",
+    "name": "Nisarg Patel",
+    "role": "student",
+    "email": "nisarg.patel21@charusat.edu.in",
+    "phone": "9909988776",
+    "department": "Civil Engineering",
+    "program": "B.Tech",
+    "semester": 8,
+    "admissionYear": 2021,
+    "status": "active"
+  },
+  {
+    "userId": "FAC-CSE-12",
+    "name": "Dr. Pankaj Desai",
+    "role": "faculty",
+    "email": "pankaj.desai@charusat.ac.in",
+    "phone": "9427123456",
+    "department": "Computer Science & Engineering",
+    "program": "Teaching Staff",
+    "semester": null,
+    "admissionYear": 2015,
+    "status": "active"
+  },
+  {
+    "userId": "FAC-ME-07",
+    "name": "Prof. Neha Joshi",
+    "role": "faculty",
+    "email": "neha.joshi@charusat.ac.in",
+    "phone": "9876512345",
+    "department": "Mechanical Engineering",
+    "program": "Teaching Staff",
+    "semester": null,
+    "admissionYear": 2018,
+    "status": "active"
+  },
+  {
+    "userId": "PAR-23DCS082",
+    "name": "Ramesh Patel",
+    "role": "parent",
+    "email": "ramesh.patel@gmail.com",
+    "phone": "9510123456",
+    "department": "Computer Science & Engineering",
+    "program": "Parent",
+    "semester": null,
+    "admissionYear": 2023,
+    "status": "active"
+  },
+  {
+    "userId": "APP-2025-014",
+    "name": "Yash Mehta",
+    "role": "applicant",
+    "email": "yash.mehta@gmail.com",
+    "phone": "9988776655",
+    "department": "Information Technology",
+    "program": "B.Tech",
+    "semester": null,
+    "admissionYear": 2025,
+    "status": "pending"
+  },
+  {
+    "userId": "23IT067",
+    "name": "Priya Pandya",
+    "role": "student",
+    "email": "priya.pandya23@charusat.edu.in",
+    "phone": "9876098765",
+    "department": "Information Technology",
+    "program": "B.Tech",
+    "semester": 6,
+    "admissionYear": 2023,
+    "status": "active"
+  }
+]

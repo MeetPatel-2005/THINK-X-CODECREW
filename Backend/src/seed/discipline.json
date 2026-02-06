@@ -1,0 +1,128 @@
+[
+  {
+    "userId": "23DCS082",
+    "warnings": 0,
+    "penalties": [],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "23DCS041",
+    "warnings": 1,
+    "penalties": [
+      {
+        "reason": "Low Attendance in Semester 5",
+        "amount": 500,
+        "date": "2024-11-15"
+      }
+    ],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "23ME052",
+    "warnings": 2,
+    "penalties": [
+      {
+        "reason": "Late Submission of Assignment",
+        "amount": 300,
+        "date": "2024-10-05"
+      },
+      {
+        "reason": "Improper Parking in Campus Area",
+        "amount": 200,
+        "date": "2024-12-12"
+      }
+    ],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "22EC031",
+    "warnings": 3,
+    "penalties": [
+      {
+        "reason": "Exam Malpractice Attempt",
+        "amount": 2000,
+        "date": "2024-09-28"
+      },
+      {
+        "reason": "Unauthorized Mobile Phone Use in Exam Hall",
+        "amount": 1000,
+        "date": "2024-10-02"
+      }
+    ],
+    "blacklistStatus": true
+  },
+
+  {
+    "userId": "21CE014",
+    "warnings": 0,
+    "penalties": [],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "23IT067",
+    "warnings": 1,
+    "penalties": [
+      {
+        "reason": "Late Hostel Entry",
+        "amount": 400,
+        "date": "2024-11-20"
+      }
+    ],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "22IT034",
+    "warnings": 2,
+    "penalties": [
+      {
+        "reason": "Library Book Overdue",
+        "amount": 250,
+        "date": "2024-08-18"
+      }
+    ],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "23DCS055",
+    "warnings": 4,
+    "penalties": [
+      {
+        "reason": "Misbehavior with Faculty",
+        "amount": 1500,
+        "date": "2024-09-10"
+      },
+      {
+        "reason": "Skipping Mandatory Workshop",
+        "amount": 500,
+        "date": "2024-11-05"
+      }
+    ],
+    "blacklistStatus": true
+  },
+
+  {
+    "userId": "21ME019",
+    "warnings": 1,
+    "penalties": [
+      {
+        "reason": "Unauthorized Use of Lab Equipment",
+        "amount": 700,
+        "date": "2024-10-22"
+      }
+    ],
+    "blacklistStatus": false
+  },
+
+  {
+    "userId": "22EC045",
+    "warnings": 0,
+    "penalties": [],
+    "blacklistStatus": false
+  }
+]

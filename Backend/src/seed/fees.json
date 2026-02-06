@@ -1,0 +1,261 @@
+[
+  {
+    "userId": "23DCS082",
+    "feeStructure": [
+      {
+        "semester": 6,
+        "tuitionFee": 60000,
+        "hostelFee": 22500,
+        "messFee": 15000,
+        "transportFee": 8000,
+        "totalAmount": 105500
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN23082001",
+        "amount": 105500,
+        "date": "2025-01-12",
+        "mode": "upi",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN23082001.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "23DCS041",
+    "feeStructure": [
+      {
+        "semester": 6,
+        "tuitionFee": 60000,
+        "hostelFee": 0,
+        "messFee": 0,
+        "transportFee": 6000,
+        "totalAmount": 66000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN23041002",
+        "amount": 40000,
+        "date": "2025-01-15",
+        "mode": "netbanking",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN23041002.pdf"
+      }
+    ],
+    "dues": 26000,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "23ME052",
+    "feeStructure": [
+      {
+        "semester": 6,
+        "tuitionFee": 58000,
+        "hostelFee": 21000,
+        "messFee": 14000,
+        "transportFee": 0,
+        "totalAmount": 93000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN23052003",
+        "amount": 93000,
+        "date": "2025-01-10",
+        "mode": "card",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN23052003.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "22EC031",
+    "feeStructure": [
+      {
+        "semester": 8,
+        "tuitionFee": 60000,
+        "hostelFee": 22000,
+        "messFee": 15000,
+        "transportFee": 0,
+        "totalAmount": 97000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN22031004",
+        "amount": 97000,
+        "date": "2025-01-18",
+        "mode": "upi",
+        "status": "failed",
+        "receiptUrl": null
+      }
+    ],
+    "dues": 97000,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "21CE014",
+    "feeStructure": [
+      {
+        "semester": 8,
+        "tuitionFee": 55000,
+        "hostelFee": 0,
+        "messFee": 0,
+        "transportFee": 7000,
+        "totalAmount": 62000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN21014005",
+        "amount": 62000,
+        "date": "2025-01-08",
+        "mode": "cash",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN21014005.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "refunded"
+  },
+
+  {
+    "userId": "23IT067",
+    "feeStructure": [
+      {
+        "semester": 6,
+        "tuitionFee": 62000,
+        "hostelFee": 23000,
+        "messFee": 16000,
+        "transportFee": 9000,
+        "totalAmount": 110000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN23067006",
+        "amount": 70000,
+        "date": "2025-01-20",
+        "mode": "upi",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN23067006.pdf"
+      }
+    ],
+    "dues": 40000,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "22IT034",
+    "feeStructure": [
+      {
+        "semester": 7,
+        "tuitionFee": 60000,
+        "hostelFee": 20000,
+        "messFee": 14000,
+        "transportFee": 0,
+        "totalAmount": 94000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN22034007",
+        "amount": 94000,
+        "date": "2025-01-14",
+        "mode": "netbanking",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN22034007.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "23DCS055",
+    "feeStructure": [
+      {
+        "semester": 6,
+        "tuitionFee": 60000,
+        "hostelFee": 0,
+        "messFee": 0,
+        "transportFee": 5000,
+        "totalAmount": 65000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN23055008",
+        "amount": 30000,
+        "date": "2025-01-22",
+        "mode": "upi",
+        "status": "pending",
+        "receiptUrl": null
+      }
+    ],
+    "dues": 35000,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "21ME019",
+    "feeStructure": [
+      {
+        "semester": 8,
+        "tuitionFee": 58000,
+        "hostelFee": 22000,
+        "messFee": 15000,
+        "transportFee": 0,
+        "totalAmount": 95000
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN21019009",
+        "amount": 95000,
+        "date": "2025-01-05",
+        "mode": "card",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN21019009.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "not_applicable"
+  },
+
+  {
+    "userId": "22EC045",
+    "feeStructure": [
+      {
+        "semester": 7,
+        "tuitionFee": 59000,
+        "hostelFee": 21000,
+        "messFee": 14500,
+        "transportFee": 6000,
+        "totalAmount": 100500
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "TXN22045010",
+        "amount": 100500,
+        "date": "2025-01-17",
+        "mode": "upi",
+        "status": "success",
+        "receiptUrl": "/receipts/TXN22045010.pdf"
+      }
+    ],
+    "dues": 0,
+    "refundStatus": "not_applicable"
+  }
+]

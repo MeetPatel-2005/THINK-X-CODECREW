@@ -1,0 +1,111 @@
+[
+  {
+    "userId": "23DCS082",
+    "isAllotted": false,
+    "hostelName": "Shree Krishna Boys PG, Changa",
+    "roomNumber": "B-12",
+    "hostelType": "boys",
+    "fees": 42000,
+    "messPlan": "Monthly Veg Mess",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "23IT067",
+    "isAllotted": true,
+    "hostelName": "CHARUSAT Girls Hostel - A Block",
+    "roomNumber": "A-204",
+    "hostelType": "girls",
+    "fees": 45000,
+    "messPlan": "Full Semester Mess",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "23DCS041",
+    "isAllotted": false,
+    "hostelName": "Patel Boys Hostel, Petlad Road",
+    "roomNumber": "P-15",
+    "hostelType": "boys",
+    "fees": 40000,
+    "messPlan": "Tiffin Service",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "22EC031",
+    "isAllotted": false,
+    "hostelName": "Radhe Krishna PG, Nadiad",
+    "roomNumber": "R-07",
+    "hostelType": "boys",
+    "fees": 38000,
+    "messPlan": "Local Mess Subscription",
+    "rulesAccepted": false
+  },
+
+  {
+    "userId": "22EC045",
+    "isAllotted": true,
+    "hostelName": "CHARUSAT Girls Hostel - B Block",
+    "roomNumber": "B-118",
+    "hostelType": "girls",
+    "fees": 43000,
+    "messPlan": "Full Semester Mess",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "21CE014",
+    "isAllotted": false,
+    "hostelName": "Shiv Shakti Boys PG, Anand Road",
+    "roomNumber": "S-21",
+    "hostelType": "boys",
+    "fees": 36000,
+    "messPlan": "Monthly Veg Mess",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "23DCS055",
+    "isAllotted": false,
+    "hostelName": "Om Residency Boys Hostel, Changa",
+    "roomNumber": "O-09",
+    "hostelType": "boys",
+    "fees": 39000,
+    "messPlan": "No Mess (Self Cooking)",
+    "rulesAccepted": false
+  },
+
+  {
+    "userId": "22IT034",
+    "isAllotted": true,
+    "hostelName": "CHARUSAT Girls Hostel - C Block",
+    "roomNumber": "C-305",
+    "hostelType": "girls",
+    "fees": 46000,
+    "messPlan": "Premium Mess Plan",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "21ME019",
+    "isAllotted": false,
+    "hostelName": "Sai Boys PG, Petlad",
+    "roomNumber": "S-14",
+    "hostelType": "boys",
+    "fees": 41000,
+    "messPlan": "Local Tiffin Service",
+    "rulesAccepted": true
+  },
+
+  {
+    "userId": "23ME052",
+    "isAllotted": false,
+    "hostelName": "Yogi Boys Hostel, Changa",
+    "roomNumber": "Y-05",
+    "hostelType": "boys",
+    "fees": 37000,
+    "messPlan": "Monthly Mess",
+    "rulesAccepted": true
+  }
+]

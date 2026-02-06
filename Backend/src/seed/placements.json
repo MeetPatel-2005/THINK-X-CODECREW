@@ -1,0 +1,235 @@
+[
+  {
+    "userId": "23DCS082",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Aptitude Training",
+      "DSA Bootcamp",
+      "Mock Interviews"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Tata Consultancy Services",
+        "role": "Assistant System Engineer",
+        "package": "3.5 LPA",
+        "status": "selected"
+      },
+      {
+        "companyName": "Infosys",
+        "role": "Systems Engineer",
+        "package": "3.6 LPA",
+        "status": "shortlisted"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Tata Consultancy Services",
+        "role": "Assistant System Engineer",
+        "ctc": "3.5 LPA",
+        "joiningDate": "2026-07-15"
+      }
+    ]
+  },
+
+  {
+    "userId": "23DCS041",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Soft Skills Training",
+      "Aptitude Practice"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Wipro",
+        "role": "Project Engineer",
+        "package": "3.5 LPA",
+        "status": "rejected"
+      },
+      {
+        "companyName": "Capgemini",
+        "role": "Analyst",
+        "package": "4.0 LPA",
+        "status": "shortlisted"
+      }
+    ],
+    "offers": []
+  },
+
+  {
+    "userId": "23ME052",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Core Mechanical Training",
+      "Interview Preparation"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Larsen & Toubro",
+        "role": "Graduate Engineer Trainee",
+        "package": "6.0 LPA",
+        "status": "selected"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Larsen & Toubro",
+        "role": "Graduate Engineer Trainee",
+        "ctc": "6.0 LPA",
+        "joiningDate": "2026-06-20"
+      }
+    ]
+  },
+
+  {
+    "userId": "22EC031",
+    "eligibility": false,
+    "registered": false,
+    "trainingPrograms": [],
+    "companiesApplied": [],
+    "offers": []
+  },
+
+  {
+    "userId": "21CE014",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Site Management Workshop",
+      "AutoCAD Training"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Adani Group",
+        "role": "Site Engineer",
+        "package": "5.5 LPA",
+        "status": "selected"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Adani Group",
+        "role": "Site Engineer",
+        "ctc": "5.5 LPA",
+        "joiningDate": "2026-05-10"
+      }
+    ]
+  },
+
+  {
+    "userId": "23IT067",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Cloud Certification",
+      "AWS Training",
+      "DSA Bootcamp"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Amazon",
+        "role": "Cloud Support Associate",
+        "package": "7.2 LPA",
+        "status": "shortlisted"
+      },
+      {
+        "companyName": "Accenture",
+        "role": "Associate Software Engineer",
+        "package": "4.5 LPA",
+        "status": "selected"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Accenture",
+        "role": "Associate Software Engineer",
+        "ctc": "4.5 LPA",
+        "joiningDate": "2026-08-01"
+      }
+    ]
+  },
+
+  {
+    "userId": "22IT034",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Big Data Workshop",
+      "Resume Building"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Cognizant",
+        "role": "Programmer Analyst",
+        "package": "4.0 LPA",
+        "status": "selected"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Cognizant",
+        "role": "Programmer Analyst",
+        "ctc": "4.0 LPA",
+        "joiningDate": "2026-07-05"
+      }
+    ]
+  },
+
+  {
+    "userId": "23DCS055",
+    "eligibility": false,
+    "registered": false,
+    "trainingPrograms": [
+      "Backlog Clearance Program"
+    ],
+    "companiesApplied": [],
+    "offers": []
+  },
+
+  {
+    "userId": "21ME019",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Automobile Industry Training",
+      "Mock Interviews"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Mahindra & Mahindra",
+        "role": "Production Engineer",
+        "package": "5.0 LPA",
+        "status": "shortlisted"
+      }
+    ],
+    "offers": []
+  },
+
+  {
+    "userId": "22EC045",
+    "eligibility": true,
+    "registered": true,
+    "trainingPrograms": [
+      "Embedded Systems Training",
+      "IoT Workshop"
+    ],
+    "companiesApplied": [
+      {
+        "companyName": "Bosch",
+        "role": "Embedded Engineer",
+        "package": "6.5 LPA",
+        "status": "selected"
+      }
+    ],
+    "offers": [
+      {
+        "company": "Bosch",
+        "role": "Embedded Engineer",
+        "ctc": "6.5 LPA",
+        "joiningDate": "2026-06-25"
+      }
+    ]
+  }
+]

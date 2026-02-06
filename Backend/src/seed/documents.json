@@ -1,0 +1,111 @@
+[
+  {
+    "userId": "23DCS082",
+    "documentId": "DOC-23082-001",
+    "title": "Semester 5 Marksheet",
+    "category": "academic",
+    "fileUrl": "/uploads/marksheets/23DCS082_sem5.pdf",
+    "uploadedAt": "2025-01-20",
+    "verified": true,
+    "extractedText": "Name: Malay Patel, Semester: 5, CGPA: 8.9, Subjects: AI, DBMS, WT, Status: Pass"
+  },
+
+  {
+    "userId": "23DCS082",
+    "documentId": "DOC-23082-002",
+    "title": "Aadhar Card",
+    "category": "identity",
+    "fileUrl": "/uploads/identity/23DCS082_aadhar.jpg",
+    "uploadedAt": "2024-08-10",
+    "verified": true,
+    "extractedText": "Name: Malay Patel, DOB: 12-04-2004, Aadhar: XXXX-XXXX-3456"
+  },
+
+  {
+    "userId": "23ME052",
+    "documentId": "DOC-23052-003",
+    "title": "Fee Receipt Semester 6",
+    "category": "finance",
+    "fileUrl": "/uploads/receipts/23ME052_fee_sem6.pdf",
+    "uploadedAt": "2025-01-11",
+    "verified": true,
+    "extractedText": "Transaction ID: TXN23052003, Amount: Rs. 93000, Status: Paid"
+  },
+
+  {
+    "userId": "22EC031",
+    "documentId": "DOC-22031-004",
+    "title": "12th Standard Marksheet",
+    "category": "admission",
+    "fileUrl": "/uploads/admission/22EC031_12th_marksheet.pdf",
+    "uploadedAt": "2024-06-18",
+    "verified": true,
+    "extractedText": "Board: GSEB, Percentage: 78.4%, Year: 2022"
+  },
+
+  {
+    "userId": "21CE014",
+    "documentId": "DOC-21014-005",
+    "title": "Internship Completion Certificate",
+    "category": "academic",
+    "fileUrl": "/uploads/internships/21CE014_internship.pdf",
+    "uploadedAt": "2024-12-05",
+    "verified": true,
+    "extractedText": "Company: Adani Infra, Duration: 2 Months, Performance: Excellent"
+  },
+
+  {
+    "userId": "23IT067",
+    "documentId": "DOC-23067-006",
+    "title": "Income Certificate",
+    "category": "admission",
+    "fileUrl": "/uploads/admission/23IT067_income_cert.pdf",
+    "uploadedAt": "2024-07-12",
+    "verified": true,
+    "extractedText": "Annual Income: Rs. 2,40,000, Issued By: Mamlatdar Office"
+  },
+
+  {
+    "userId": "22IT034",
+    "documentId": "DOC-22034-007",
+    "title": "Scholarship Approval Letter",
+    "category": "finance",
+    "fileUrl": "/uploads/scholarships/22IT034_scholarship.pdf",
+    "uploadedAt": "2024-09-15",
+    "verified": true,
+    "extractedText": "Post Matric Scholarship Approved, Amount: Rs. 30000"
+  },
+
+  {
+    "userId": "23DCS055",
+    "documentId": "DOC-23055-008",
+    "title": "Backlog Result Notice",
+    "category": "academic",
+    "fileUrl": "/uploads/results/23DCS055_backlog.pdf",
+    "uploadedAt": "2025-02-01",
+    "verified": false,
+    "extractedText": "Subject: Operating Systems, Result: Fail, Re-exam Required"
+  },
+
+  {
+    "userId": "21ME019",
+    "documentId": "DOC-21019-009",
+    "title": "Placement Offer Letter",
+    "category": "academic",
+    "fileUrl": "/uploads/placements/21ME019_offer_letter.pdf",
+    "uploadedAt": "2025-01-28",
+    "verified": true,
+    "extractedText": "Company: Mahindra & Mahindra, CTC: 5.0 LPA, Joining: July 2026"
+  },
+
+  {
+    "userId": "APP-2025-014",
+    "documentId": "DOC-APP014-010",
+    "title": "School Leaving Certificate",
+    "category": "admission",
+    "fileUrl": "/uploads/admission/APP014_slc.pdf",
+    "uploadedAt": "2025-06-19",
+    "verified": false,
+    "extractedText": "School: GSEB High School, Passing Year: 2023, Character: Good"
+  }
+]

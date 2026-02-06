@@ -1,0 +1,81 @@
+[
+  {
+    "userId": "23DCS082",
+    "preferredLanguage": "English",
+    "notificationEnabled": true,
+    "darkMode": true,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "23DCS041",
+    "preferredLanguage": "Gujarati",
+    "notificationEnabled": true,
+    "darkMode": false,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "23ME052",
+    "preferredLanguage": "Hindi",
+    "notificationEnabled": false,
+    "darkMode": true,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "22EC031",
+    "preferredLanguage": "English",
+    "notificationEnabled": true,
+    "darkMode": false,
+    "privacyConsent": false
+  },
+
+  {
+    "userId": "21CE014",
+    "preferredLanguage": "Gujarati",
+    "notificationEnabled": false,
+    "darkMode": false,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "23IT067",
+    "preferredLanguage": "English",
+    "notificationEnabled": true,
+    "darkMode": true,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "22IT034",
+    "preferredLanguage": "Hindi",
+    "notificationEnabled": true,
+    "darkMode": false,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "23DCS055",
+    "preferredLanguage": "English",
+    "notificationEnabled": false,
+    "darkMode": true,
+    "privacyConsent": false
+  },
+
+  {
+    "userId": "21ME019",
+    "preferredLanguage": "Gujarati",
+    "notificationEnabled": true,
+    "darkMode": true,
+    "privacyConsent": true
+  },
+
+  {
+    "userId": "APP-2025-014",
+    "preferredLanguage": "English",
+    "notificationEnabled": true,
+    "darkMode": false,
+    "privacyConsent": true
+  }
+]

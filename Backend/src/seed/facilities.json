@@ -1,0 +1,111 @@
+[
+  {
+    "userId": "23DCS082",
+    "library": {
+      "booksIssued": 3,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": true
+  },
+
+  {
+    "userId": "23DCS041",
+    "library": {
+      "booksIssued": 5,
+      "fines": 150
+    },
+    "labAccess": true,
+    "gymAccess": false,
+    "transportPass": true
+  },
+
+  {
+    "userId": "23ME052",
+    "library": {
+      "booksIssued": 2,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": false
+  },
+
+  {
+    "userId": "22EC031",
+    "library": {
+      "booksIssued": 4,
+      "fines": 300
+    },
+    "labAccess": false,
+    "gymAccess": false,
+    "transportPass": true
+  },
+
+  {
+    "userId": "21CE014",
+    "library": {
+      "booksIssued": 1,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": false
+  },
+
+  {
+    "userId": "23IT067",
+    "library": {
+      "booksIssued": 6,
+      "fines": 200
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": true
+  },
+
+  {
+    "userId": "22IT034",
+    "library": {
+      "booksIssued": 3,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": false,
+    "transportPass": false
+  },
+
+  {
+    "userId": "23DCS055",
+    "library": {
+      "booksIssued": 0,
+      "fines": 500
+    },
+    "labAccess": false,
+    "gymAccess": false,
+    "transportPass": true
+  },
+
+  {
+    "userId": "21ME019",
+    "library": {
+      "booksIssued": 2,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": true
+  },
+
+  {
+    "userId": "22EC045",
+    "library": {
+      "booksIssued": 4,
+      "fines": 0
+    },
+    "labAccess": true,
+    "gymAccess": true,
+    "transportPass": false
+  }
+]

@@ -1,0 +1,267 @@
+[
+  {
+    "userId": "23DCS082",
+    "courses": [
+      {
+        "courseCode": "CS601",
+        "courseName": "Artificial Intelligence",
+        "credits": 4,
+        "faculty": "Dr. Pankaj Desai",
+        "attendancePercentage": 88,
+        "internalMarks": 27,
+        "externalMarks": 58,
+        "grade": "A",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "CS602",
+        "courseName": "Web Technologies",
+        "credits": 3,
+        "faculty": "Prof. Neha Joshi",
+        "attendancePercentage": 91,
+        "internalMarks": 25,
+        "externalMarks": 52,
+        "grade": "A",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 8.9,
+    "totalCredits": 98,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "23DCS041",
+    "courses": [
+      {
+        "courseCode": "CS601",
+        "courseName": "Artificial Intelligence",
+        "credits": 4,
+        "faculty": "Dr. Pankaj Desai",
+        "attendancePercentage": 72,
+        "internalMarks": 20,
+        "externalMarks": 42,
+        "grade": "B",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "CS603",
+        "courseName": "Database Management Systems",
+        "credits": 4,
+        "faculty": "Prof. Rina Patel",
+        "attendancePercentage": 68,
+        "internalMarks": 18,
+        "externalMarks": 35,
+        "grade": "C",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 7.2,
+    "totalCredits": 92,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "23ME052",
+    "courses": [
+      {
+        "courseCode": "ME601",
+        "courseName": "Thermal Engineering",
+        "credits": 4,
+        "faculty": "Prof. Amit Mehta",
+        "attendancePercentage": 79,
+        "internalMarks": 22,
+        "externalMarks": 48,
+        "grade": "B+",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "ME602",
+        "courseName": "Machine Design",
+        "credits": 4,
+        "faculty": "Dr. Suresh Patel",
+        "attendancePercentage": 74,
+        "internalMarks": 21,
+        "externalMarks": 44,
+        "grade": "B",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 7.6,
+    "totalCredits": 95,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "22EC031",
+    "courses": [
+      {
+        "courseCode": "EC701",
+        "courseName": "Digital Signal Processing",
+        "credits": 4,
+        "faculty": "Dr. Mahesh Shah",
+        "attendancePercentage": 65,
+        "internalMarks": 16,
+        "externalMarks": 32,
+        "grade": "C",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "EC702",
+        "courseName": "VLSI Design",
+        "credits": 3,
+        "faculty": "Prof. Ritu Desai",
+        "attendancePercentage": 58,
+        "internalMarks": 14,
+        "externalMarks": 28,
+        "grade": "D",
+        "resultStatus": "backlog"
+      }
+    ],
+    "cgpa": 6.4,
+    "totalCredits": 86,
+    "graduationEligibility": false
+  },
+
+  {
+    "userId": "21CE014",
+    "courses": [
+      {
+        "courseCode": "CE801",
+        "courseName": "Structural Analysis",
+        "credits": 4,
+        "faculty": "Dr. Jignesh Patel",
+        "attendancePercentage": 82,
+        "internalMarks": 24,
+        "externalMarks": 50,
+        "grade": "A",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "CE802",
+        "courseName": "Construction Planning",
+        "credits": 3,
+        "faculty": "Prof. Hiral Mehta",
+        "attendancePercentage": 85,
+        "internalMarks": 23,
+        "externalMarks": 46,
+        "grade": "A-",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 8.4,
+    "totalCredits": 110,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "23IT067",
+    "courses": [
+      {
+        "courseCode": "IT601",
+        "courseName": "Cloud Computing",
+        "credits": 4,
+        "faculty": "Dr. Nilesh Patel",
+        "attendancePercentage": 90,
+        "internalMarks": 28,
+        "externalMarks": 60,
+        "grade": "A+",
+        "resultStatus": "pass"
+      },
+      {
+        "courseCode": "IT602",
+        "courseName": "Cyber Security",
+        "credits": 3,
+        "faculty": "Prof. Rupal Shah",
+        "attendancePercentage": 87,
+        "internalMarks": 26,
+        "externalMarks": 55,
+        "grade": "A",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 9.1,
+    "totalCredits": 100,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "22IT034",
+    "courses": [
+      {
+        "courseCode": "IT701",
+        "courseName": "Big Data Analytics",
+        "credits": 4,
+        "faculty": "Dr. Ketan Mehta",
+        "attendancePercentage": 70,
+        "internalMarks": 19,
+        "externalMarks": 38,
+        "grade": "B",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 7.0,
+    "totalCredits": 90,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "23DCS055",
+    "courses": [
+      {
+        "courseCode": "CS604",
+        "courseName": "Operating Systems",
+        "credits": 4,
+        "faculty": "Prof. Rina Patel",
+        "attendancePercentage": 62,
+        "internalMarks": 15,
+        "externalMarks": 30,
+        "grade": "D",
+        "resultStatus": "backlog"
+      }
+    ],
+    "cgpa": 5.9,
+    "totalCredits": 80,
+    "graduationEligibility": false
+  },
+
+  {
+    "userId": "21ME019",
+    "courses": [
+      {
+        "courseCode": "ME801",
+        "courseName": "Automobile Engineering",
+        "credits": 4,
+        "faculty": "Dr. Rahul Joshi",
+        "attendancePercentage": 84,
+        "internalMarks": 25,
+        "externalMarks": 54,
+        "grade": "A",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 8.1,
+    "totalCredits": 108,
+    "graduationEligibility": true
+  },
+
+  {
+    "userId": "22EC045",
+    "courses": [
+      {
+        "courseCode": "EC703",
+        "courseName": "Embedded Systems",
+        "credits": 4,
+        "faculty": "Dr. Mahesh Shah",
+        "attendancePercentage": 76,
+        "internalMarks": 21,
+        "externalMarks": 45,
+        "grade": "B+",
+        "resultStatus": "pass"
+      }
+    ],
+    "cgpa": 7.5,
+    "totalCredits": 94,
+    "graduationEligibility": true
+  }
+]

@@ -1,0 +1,261 @@
+[
+  {
+    "userId": "23DCS082",
+    "timetable": [
+      {
+        "day": "Monday",
+        "subject": "Artificial Intelligence",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "CSE-301",
+        "faculty": "Dr. Pankaj Desai"
+      },
+      {
+        "day": "Monday",
+        "subject": "Web Technologies Lab",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "room": "CSE-LAB-2",
+        "faculty": "Prof. Neha Joshi"
+      },
+      {
+        "day": "Wednesday",
+        "subject": "Database Management Systems",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "CSE-204",
+        "faculty": "Prof. Rina Patel"
+      }
+    ]
+  },
+
+  {
+    "userId": "23DCS041",
+    "timetable": [
+      {
+        "day": "Tuesday",
+        "subject": "Artificial Intelligence",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "CSE-301",
+        "faculty": "Dr. Pankaj Desai"
+      },
+      {
+        "day": "Thursday",
+        "subject": "Operating Systems",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "room": "CSE-210",
+        "faculty": "Prof. Rina Patel"
+      },
+      {
+        "day": "Friday",
+        "subject": "OS Lab",
+        "startTime": "14:00",
+        "endTime": "16:00",
+        "room": "CSE-LAB-1",
+        "faculty": "Prof. Rina Patel"
+      }
+    ]
+  },
+
+  {
+    "userId": "23ME052",
+    "timetable": [
+      {
+        "day": "Monday",
+        "subject": "Thermal Engineering",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "ME-105",
+        "faculty": "Prof. Amit Mehta"
+      },
+      {
+        "day": "Wednesday",
+        "subject": "Machine Design",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "ME-110",
+        "faculty": "Dr. Suresh Patel"
+      },
+      {
+        "day": "Friday",
+        "subject": "Manufacturing Lab",
+        "startTime": "13:00",
+        "endTime": "15:00",
+        "room": "ME-LAB-3",
+        "faculty": "Dr. Suresh Patel"
+      }
+    ]
+  },
+
+  {
+    "userId": "22EC031",
+    "timetable": [
+      {
+        "day": "Tuesday",
+        "subject": "Digital Signal Processing",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "EC-201",
+        "faculty": "Dr. Mahesh Shah"
+      },
+      {
+        "day": "Thursday",
+        "subject": "VLSI Design",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "EC-204",
+        "faculty": "Prof. Ritu Desai"
+      },
+      {
+        "day": "Saturday",
+        "subject": "VLSI Lab",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "room": "EC-LAB-1",
+        "faculty": "Prof. Ritu Desai"
+      }
+    ]
+  },
+
+  {
+    "userId": "21CE014",
+    "timetable": [
+      {
+        "day": "Monday",
+        "subject": "Structural Analysis",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "room": "CE-301",
+        "faculty": "Dr. Jignesh Patel"
+      },
+      {
+        "day": "Wednesday",
+        "subject": "Construction Planning",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "room": "CE-305",
+        "faculty": "Prof. Hiral Mehta"
+      }
+    ]
+  },
+
+  {
+    "userId": "23IT067",
+    "timetable": [
+      {
+        "day": "Tuesday",
+        "subject": "Cloud Computing",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "IT-201",
+        "faculty": "Dr. Nilesh Patel"
+      },
+      {
+        "day": "Thursday",
+        "subject": "Cyber Security",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "IT-205",
+        "faculty": "Prof. Rupal Shah"
+      },
+      {
+        "day": "Friday",
+        "subject": "Cloud Lab",
+        "startTime": "13:00",
+        "endTime": "15:00",
+        "room": "IT-LAB-2",
+        "faculty": "Dr. Nilesh Patel"
+      }
+    ]
+  },
+
+  {
+    "userId": "22IT034",
+    "timetable": [
+      {
+        "day": "Monday",
+        "subject": "Big Data Analytics",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "room": "IT-301",
+        "faculty": "Dr. Ketan Mehta"
+      },
+      {
+        "day": "Wednesday",
+        "subject": "Data Mining",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "IT-304",
+        "faculty": "Dr. Ketan Mehta"
+      }
+    ]
+  },
+
+  {
+    "userId": "23DCS055",
+    "timetable": [
+      {
+        "day": "Tuesday",
+        "subject": "Operating Systems",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "room": "CSE-210",
+        "faculty": "Prof. Rina Patel"
+      },
+      {
+        "day": "Friday",
+        "subject": "OS Lab",
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "room": "CSE-LAB-1",
+        "faculty": "Prof. Rina Patel"
+      }
+    ]
+  },
+
+  {
+    "userId": "21ME019",
+    "timetable": [
+      {
+        "day": "Monday",
+        "subject": "Automobile Engineering",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "room": "ME-210",
+        "faculty": "Dr. Rahul Joshi"
+      },
+      {
+        "day": "Thursday",
+        "subject": "Vehicle Dynamics",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "room": "ME-215",
+        "faculty": "Dr. Rahul Joshi"
+      }
+    ]
+  },
+
+  {
+    "userId": "22EC045",
+    "timetable": [
+      {
+        "day": "Wednesday",
+        "subject": "Embedded Systems",
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "room": "EC-207",
+        "faculty": "Dr. Mahesh Shah"
+      },
+      {
+        "day": "Saturday",
+        "subject": "Embedded Lab",
+        "startTime": "10:00",
+        "endTime": "12:00",
+        "room": "EC-LAB-2",
+        "faculty": "Dr. Mahesh Shah"
+      }
+    ]
+  }
+]

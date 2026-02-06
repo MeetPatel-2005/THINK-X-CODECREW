@@ -1,0 +1,30 @@
+{
+  "name": "university-chatbot-rag",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Meet K. Patel, Malay Patel, Dheyansh Patel",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6",
+    "openai": "^6.18.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
