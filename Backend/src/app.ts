@@ -6,13 +6,16 @@ import path from "path";
 
 import openai from "./config/openai.ts";
 import fileRouter from "./file/FileRoutes.js";
+import { config } from "./config/config.ts";
 
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: config.frontendDomain,
+}));
 
 // Serve static files from public directory
 app.use("/public", express.static(path.join(process.cwd(), "public")));
