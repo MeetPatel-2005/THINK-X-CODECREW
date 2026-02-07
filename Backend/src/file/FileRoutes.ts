@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
 import path from "path";
-import { uploadFile, uploadAndQuery } from "./FileController.js";
+import { uploadFile } from "./FileController.js";
 
 const fileRouter = express.Router();
 
@@ -34,18 +34,12 @@ const upload = multer({
   },
 });
 
-// Configure multer for file uploads with fields
-const uploadFields = upload.fields([
-  { name: 'files', maxCount: 3 },  // PDF files
-  { name: 'query', maxCount: 1 }   // Query text
-]);
-
 // Routes
-// POST /api/files/upload - Upload PDFs only (no query)
+// POST /api/files/upload - Upload multiple PDFs (max 3)
 fileRouter.post(
   "/upload",
   (req, res, next) => {
-    console.log("📤 File upload only route hit");
+    console.log("📤 File upload route hit");
     console.log("Content-Type:", req.headers["content-type"]);
     next();
   },
@@ -55,23 +49,6 @@ fileRouter.post(
     next();
   },
   uploadFile,
-);
-
-// POST /api/files/upload-and-query - Upload PDFs + Get RAG Response
-fileRouter.post(
-  "/upload-and-query",
-  (req, res, next) => {
-    console.log("📤📋 File upload + query route hit");
-    console.log("Content-Type:", req.headers["content-type"]);
-    next();
-  },
-  uploadFields,
-  (req, res, next) => {
-    console.log("📁 After multer - req.files:", req.files);
-    console.log("📝 Query:", req.body.query);
-    next();
-  },
-  uploadAndQuery,
 );
 
 export default fileRouter;

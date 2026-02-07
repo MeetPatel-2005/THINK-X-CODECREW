@@ -61,6 +61,49 @@ async function getQueryEmbedding(query: string): Promise<number[]> {
 }
 
 /**
+ * Check if question is basic human interaction
+ */
+function isBasicHumanInteraction(query: string): string | null {
+  const queryLower = query.toLowerCase().trim();
+  
+  // Greetings
+  if (/^(hi|hello|hey|good morning|good afternoon|good evening|greetings)$/i.test(queryLower)) {
+    return "Hello! I'm your university assistant. How can I help you today?";
+  }
+  
+  // How are you
+  if (/how are you|how're you|how do you do/i.test(queryLower)) {
+    return "I'm doing great, thank you! I'm here to help with your university questions.";
+  }
+  
+  // Date and time
+  if (/what.*date.*today|today.*date|current date/i.test(queryLower)) {
+    return `Today is ${new Date().toLocaleDateString()}.`;
+  }
+  
+  if (/what.*time|current time|time now/i.test(queryLower)) {
+    return `Current time is ${new Date().toLocaleTimeString()}.`;
+  }
+  
+  // Help and assistance
+  if (/^(can you help|help me|can you assist|what can you do)$/i.test(queryLower)) {
+    return "Yes! I can help you with university-related questions about academics, fees, placements, hostel, scholarships, courses, and more.";
+  }
+  
+  // Thank you
+  if (/^(thank|thanks|thank you|thx)$/i.test(queryLower)) {
+    return "You're welcome! Happy to help!";
+  }
+  
+  // Goodbye
+  if (/^(bye|goodbye|see you|take care)$/i.test(queryLower)) {
+    return "Goodbye! Feel free to ask if you need any university-related help.";
+  }
+  
+  return null;
+}
+
+/**
  * Check if question is university-related
  */
 async function isUniversityRelated(query: string): Promise<boolean> {
@@ -231,7 +274,13 @@ app.post("/api/chat", async (req, res) => {
   }
 
   try {
-    // 1. Check if question is university-related first
+    // 1. Check if question is basic human interaction first
+    const basicResponse = isBasicHumanInteraction(question);
+    if (basicResponse) {
+      return res.json({ answer: basicResponse });
+    }
+    
+    // 2. Check if question is university-related
     const isUniversityQuestion = await isUniversityRelated(question);
 
     if (!isUniversityQuestion) {
@@ -241,10 +290,10 @@ app.post("/api/chat", async (req, res) => {
       });
     }
 
-    // 2. Generate query embedding
+    // 3. Generate query embedding
     const queryEmbedding = await getQueryEmbedding(question);
 
-    // 3. Vector search in MongoDB
+    // 4. Vector search in MongoDB
     const collection = mongoose.connection.db!.collection(
       "knowledge_embeddings",
     );

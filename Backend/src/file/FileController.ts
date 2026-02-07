@@ -26,25 +26,25 @@ async function extractTextFromPDF(filePath: string): Promise<string> {
     // Try different import paths for pdfjs-dist
     let pdfjsLib;
     try {
-      pdfjsLib = await import('pdfjs-dist');
+      pdfjsLib = await import("pdfjs-dist");
     } catch (error) {
       // Fallback to legacy path if main import fails
-      pdfjsLib = await import('pdfjs-dist/build/pdf.js');
+      pdfjsLib = await import("pdfjs-dist/build/pdf.js");
     }
-    
+
     // Disable worker and font loading for Node.js environment
     if (pdfjsLib.GlobalWorkerOptions) {
-      pdfjsLib.GlobalWorkerOptions.workerSrc = '';
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "";
     }
-    
+
     const data = new Uint8Array(fs.readFileSync(filePath));
     console.log(`📄 PDF file size: ${data.length} bytes`);
-    
+
     const pdf = await pdfjsLib.getDocument({
       data,
       useSystemFonts: false,
       disableFontFace: true,
-      nativeImageDecoderSupport: 'none',
+      nativeImageDecoderSupport: "none",
       isEvalSupported: false,
       isOffscreenCanvasSupported: false,
     }).promise;
@@ -59,7 +59,7 @@ async function extractTextFromPDF(filePath: string): Promise<string> {
         includeMarkedContent: false,
       });
       const pageText = content.items
-        .filter((item: any) => 'str' in item)
+        .filter((item: any) => "str" in item)
         .map((item: any) => item.str)
         .join(" ");
 
@@ -69,14 +69,16 @@ async function extractTextFromPDF(filePath: string): Promise<string> {
 
     const finalText = fullText.trim();
     console.log(`✅ Total extracted text: ${finalText.length} characters`);
-    
+
     if (finalText.length === 0) {
-      console.error(`❌ No text extracted - PDF might be image-based or corrupted`);
+      console.error(
+        `❌ No text extracted - PDF might be image-based or corrupted`,
+      );
     }
-    
+
     return finalText;
   } catch (error) {
-    console.error('PDF extraction error:', error);
+    console.error("PDF extraction error:", error);
     throw new Error(`Failed to extract text from PDF: ${error}`);
   }
 }
@@ -86,7 +88,7 @@ async function extractTextFromPDF(filePath: string): Promise<string> {
 ===================================================== */
 function splitTextIntoChunks(
   text: string,
-  maxChunkSize: number = 1200
+  maxChunkSize: number = 1200,
 ): string[] {
   const sentences = text.split(/[.!?]+/).filter(Boolean);
   const chunks: string[] = [];
@@ -127,12 +129,12 @@ async function generateEmbedding(text: string): Promise<number[]> {
 ===================================================== */
 async function searchSimilarContent(
   query: string,
-  limit: number = 5
+  limit: number = 5,
 ): Promise<any[]> {
   try {
     const queryEmbedding = await generateEmbedding(query);
     const collection = mongoose.connection.db!.collection(
-      "knowledge_embeddings"
+      "knowledge_embeddings",
     );
 
     // Vector search using MongoDB Atlas Vector Search
@@ -170,51 +172,67 @@ async function searchSimilarContent(
 ===================================================== */
 async function generateRAGResponse(
   query: string,
-  relevantContent: any[]
+  relevantContent: any[],
 ): Promise<{ answer: string; source: string | null }> {
   try {
-    console.log(`🤖 generateRAGResponse called with ${relevantContent.length} content items`);
-    
+    console.log(
+      `🤖 generateRAGResponse called with ${relevantContent.length} content items`,
+    );
+
     if (relevantContent.length === 0) {
       console.log("❌ No content provided to generateRAGResponse");
       return {
-        answer: "I couldn't find any relevant information to answer your question.",
-        source: null
+        answer:
+          "I couldn't find any relevant information to answer your question.",
+        source: null,
       };
     }
 
     // Check if we have uploaded content in the context
-    const hasUploadedContent = relevantContent.some(item => item.domain === "uploaded_context");
-    const uploadedItems = relevantContent.filter(item => item.domain === "uploaded_context");
-    
-    console.log(`🤖 Generating response - Total items: ${relevantContent.length}`);
+    const hasUploadedContent = relevantContent.some(
+      (item) => item.domain === "uploaded_context",
+    );
+    const uploadedItems = relevantContent.filter(
+      (item) => item.domain === "uploaded_context",
+    );
+
+    console.log(
+      `🤖 Generating response - Total items: ${relevantContent.length}`,
+    );
     console.log(`🤖 Has uploaded content: ${hasUploadedContent}`);
     console.log(`🤖 Uploaded items count: ${uploadedItems.length}`);
-    console.log(`🤖 Uploaded items preview:`, uploadedItems.slice(0, 1).map(item => ({ 
-      domain: item.domain, 
-      contentLength: item.content.length,
-      contentPreview: item.content.substring(0, 150) + "..." 
-    })));
-    
+    console.log(
+      `🤖 Uploaded items preview:`,
+      uploadedItems.slice(0, 1).map((item) => ({
+        domain: item.domain,
+        contentLength: item.content.length,
+        contentPreview: item.content.substring(0, 150) + "...",
+      })),
+    );
+
     const context = relevantContent
       .map((item) => `${item.content}`)
       .join("\n\n");
-      
+
     console.log(`🤖 Context length: ${context.length} characters`);
-    console.log(`🤖 Context preview (first 400 chars): ${context.substring(0, 400)}...`);
+    console.log(
+      `🤖 Context preview (first 400 chars): ${context.substring(0, 400)}...`,
+    );
 
     // Get the highest scoring source from existing database (not uploaded content)
-    const existingDbSources = relevantContent.filter(item => 
-      item.domain !== "uploaded_context" && 
-      item.fileName !== "Uploaded document"
+    const existingDbSources = relevantContent.filter(
+      (item) =>
+        item.domain !== "uploaded_context" &&
+        item.fileName !== "Uploaded document",
     );
-    
-    const topSource = existingDbSources.length > 0 
-      ? existingDbSources[0] 
-      : { fileName: "Uploaded documents", domain: "university" };
+
+    const topSource =
+      existingDbSources.length > 0
+        ? existingDbSources[0]
+        : { fileName: "Uploaded documents", domain: "university" };
 
     // Use more permissive prompt when we have uploaded content
-    const systemPrompt = hasUploadedContent 
+    const systemPrompt = hasUploadedContent
       ? `You are a university assistant. Answer questions based on the provided context from university documents and uploaded files.
 
 GUIDELINES:
@@ -233,7 +251,9 @@ STRICT GUIDELINES:
 - If the context doesn't contain enough information, say "The provided documents do not contain sufficient information to answer this question"
 - Give direct, concise answers in 2-3 lines maximum`;
 
-    console.log(`🤖 Using ${hasUploadedContent ? 'PERMISSIVE' : 'STRICT'} prompt mode`);
+    console.log(
+      `🤖 Using ${hasUploadedContent ? "PERMISSIVE" : "STRICT"} prompt mode`,
+    );
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
@@ -255,14 +275,18 @@ Answer based on the information provided in the context above:`,
       max_tokens: 300,
     });
 
-    const answer = completion.choices[0].message.content || "I couldn't generate a response from the provided documents.";
-    
+    const answer =
+      completion.choices[0].message.content ||
+      "I couldn't generate a response from the provided documents.";
+
     console.log(`🤖 Generated answer length: ${answer.length} characters`);
     console.log(`🤖 Generated answer preview: ${answer.substring(0, 200)}...`);
 
     return {
       answer: answer,
-      source: hasUploadedContent ? "Uploaded documents + University data" : (topSource?.fileName || topSource?.domain || "University documents")
+      source: hasUploadedContent
+        ? "Uploaded documents + University data"
+        : topSource?.fileName || topSource?.domain || "University documents",
     };
   } catch (error) {
     console.error("RAG response generation error:", error);
@@ -273,11 +297,7 @@ Answer based on the information provided in the context above:`,
 /* =====================================================
    MAIN CONTROLLER
 ===================================================== */
-const uploadFile = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+const uploadFile = async (req: Request, res: Response, next: NextFunction) => {
   const _req = req as AuthRequest;
 
   try {
@@ -304,7 +324,7 @@ const uploadFile = async (
     const __dirname = path.dirname(__filename);
 
     const collection = mongoose.connection.db!.collection(
-      "knowledge_embeddings"
+      "knowledge_embeddings",
     );
 
     const processedFiles: any[] = [];
@@ -316,7 +336,7 @@ const uploadFile = async (
       const localPath = path.join(
         __dirname,
         "../../public/data/uploads",
-        file.filename
+        file.filename,
       );
 
       try {
@@ -388,7 +408,7 @@ const uploadFile = async (
 const uploadAndQuery = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const _req = req as AuthRequest;
   const { query } = req.body;
@@ -401,9 +421,11 @@ const uploadAndQuery = async (
     /* -----------------------------
        VALIDATE FILES
     ----------------------------- */
-    
+
     // Handle multer.fields() structure: req.files is an object with field names as keys
-    const filesObj = req.files as { [fieldname: string]: Express.Multer.File[] };
+    const filesObj = req.files as {
+      [fieldname: string]: Express.Multer.File[];
+    };
     const files = filesObj?.files || [];
 
     if (!files || files.length === 0) {
@@ -424,14 +446,14 @@ const uploadAndQuery = async (
     const __dirname = path.dirname(__filename);
 
     const collection = mongoose.connection.db!.collection(
-      "knowledge_embeddings"
+      "knowledge_embeddings",
     );
 
     /* -----------------------------
        FIRST: EXTRACT CONTENT FROM UPLOADED FILES
     ----------------------------- */
     console.log(`📄 Extracting content from ${files.length} uploaded files...`);
-    
+
     const uploadedContent: string[] = [];
     const processedFiles: any[] = [];
 
@@ -439,7 +461,7 @@ const uploadAndQuery = async (
       const localPath = path.join(
         __dirname,
         "../../public/data/uploads",
-        file.filename
+        file.filename,
       );
 
       try {
@@ -453,40 +475,54 @@ const uploadAndQuery = async (
         // 2️⃣ Extract text using pdfjs-dist
         console.log(`🔍 Extracting text from: ${file.originalname}`);
         const extractedText = await extractTextFromPDF(localPath);
-        console.log(`📏 Extracted text length: ${extractedText?.length || 0} characters`);
-        
+        console.log(
+          `📏 Extracted text length: ${extractedText?.length || 0} characters`,
+        );
+
         if (!extractedText || extractedText.trim().length === 0) {
-          console.error(`❌ No text extracted from ${file.originalname} (possibly scanned PDF)`);
+          console.error(
+            `❌ No text extracted from ${file.originalname} (possibly scanned PDF)`,
+          );
           console.log(`📄 Raw extracted value: "${extractedText}"`);
           throw new Error("No text extracted (possibly scanned PDF)");
         }
 
-        console.log(`📄 Text preview (first 300 chars): ${extractedText.substring(0, 300)}...`);
-        console.log(`📄 Text middle (chars 1000-1300): ${extractedText.substring(1000, 1300)}...`);
+        console.log(
+          `📄 Text preview (first 300 chars): ${extractedText.substring(0, 300)}...`,
+        );
+        console.log(
+          `📄 Text middle (chars 1000-1300): ${extractedText.substring(1000, 1300)}...`,
+        );
 
         // Store extracted content for immediate use in response
         uploadedContent.push(extractedText);
-        console.log(`✅ Added extracted content to uploadedContent array. Total files: ${uploadedContent.length}`);
+        console.log(
+          `✅ Added extracted content to uploadedContent array. Total files: ${uploadedContent.length}`,
+        );
 
         // Check if file already exists in database
         const existingFile = await collection.findOne({
           fileName: file.originalname,
-          domain: "user_uploaded"
+          domain: "user_uploaded",
         });
 
         if (existingFile) {
-          console.log(`📋 File ${file.originalname} already exists in database, skipping storage`);
+          console.log(
+            `📋 File ${file.originalname} already exists in database, skipping storage`,
+          );
           processedFiles.push({
             fileName: file.originalname,
             status: "already_exists",
-            message: "File already stored in database"
+            message: "File already stored in database",
           });
         } else {
           // 3️⃣ Chunk text for database storage (only if file doesn't exist)
           const chunks = splitTextIntoChunks(extractedText);
 
           // 4️⃣ Generate embeddings + store for future use
-          console.log(`💾 Storing ${chunks.length} chunks for ${file.originalname}`);
+          console.log(
+            `💾 Storing ${chunks.length} chunks for ${file.originalname}`,
+          );
           for (let i = 0; i < chunks.length; i++) {
             const embedding = await generateEmbedding(chunks[i]);
 
@@ -524,25 +560,33 @@ const uploadAndQuery = async (
        SECOND: SEARCH EXISTING DATABASE AND COMBINE WITH UPLOADED CONTENT
     ----------------------------- */
     console.log(`🔍 Searching existing database for: ${query}`);
-    
+
     // Search existing database
     const existingContent = await searchSimilarContent(query, 3);
-    
-    console.log(`📄 Found ${existingContent.length} relevant chunks from existing data`);
+
+    console.log(
+      `📄 Found ${existingContent.length} relevant chunks from existing data`,
+    );
     console.log(`📄 Extracted ${uploadedContent.length} documents from upload`);
-    console.log(`📄 Total uploaded content length: ${uploadedContent.reduce((acc, content) => acc + content.length, 0)} characters`);
-    
+    console.log(
+      `📄 Total uploaded content length: ${uploadedContent.reduce((acc, content) => acc + content.length, 0)} characters`,
+    );
+
     if (uploadedContent.length === 0) {
-      console.error(`❌ CRITICAL: uploadedContent array is EMPTY! This is the problem!`);
+      console.error(
+        `❌ CRITICAL: uploadedContent array is EMPTY! This is the problem!`,
+      );
       console.error(`Upload processing might have failed for all files`);
     }
-    
+
     // Combine existing database content with newly uploaded content
     const combinedContent = [
       ...existingContent,
       // Add uploaded content as high-relevance items (chunked for better processing)
-      ...uploadedContent.flatMap(content => {
-        console.log(`🔧 Processing uploaded content of length: ${content.length}`);
+      ...uploadedContent.flatMap((content) => {
+        console.log(
+          `🔧 Processing uploaded content of length: ${content.length}`,
+        );
         if (!content || content.trim().length === 0) {
           console.error(`❌ Empty content detected in uploadedContent array!`);
           return [];
@@ -554,29 +598,42 @@ const uploadAndQuery = async (
           score: 0.95, // Very high relevance score for uploaded content
           domain: "uploaded_context",
           fileName: "Uploaded document",
-          chunkIndex: index
+          chunkIndex: index,
         }));
-      })
+      }),
     ];
 
     console.log(`📊 Total context items: ${combinedContent.length}`);
-    console.log(`📊 Uploaded context items: ${combinedContent.filter(item => item.domain === "uploaded_context").length}`);
-    console.log(`📊 Existing DB items: ${combinedContent.filter(item => item.domain !== "uploaded_context").length}`);
-    console.log(`📝 Context preview:`, combinedContent.slice(0, 2).map(item => ({ 
-      domain: item.domain, 
-      contentPreview: item.content.substring(0, 100) + "..." 
-    })));
+    console.log(
+      `📊 Uploaded context items: ${combinedContent.filter((item) => item.domain === "uploaded_context").length}`,
+    );
+    console.log(
+      `📊 Existing DB items: ${combinedContent.filter((item) => item.domain !== "uploaded_context").length}`,
+    );
+    console.log(
+      `📝 Context preview:`,
+      combinedContent.slice(0, 2).map((item) => ({
+        domain: item.domain,
+        contentPreview: item.content.substring(0, 100) + "...",
+      })),
+    );
 
     console.log(`📊 CRITICAL DEBUG - BEFORE generateRAGResponse:`);
     console.log(`📊 uploadedContent length: ${uploadedContent.length}`);
     console.log(`📊 combinedContent length: ${combinedContent.length}`);
     console.log(`📊 combinedContent breakdown:`, {
-      uploadedItems: combinedContent.filter(item => item.domain === "uploaded_context").length,
-      existingItems: combinedContent.filter(item => item.domain !== "uploaded_context").length
+      uploadedItems: combinedContent.filter(
+        (item) => item.domain === "uploaded_context",
+      ).length,
+      existingItems: combinedContent.filter(
+        (item) => item.domain !== "uploaded_context",
+      ).length,
     });
-    
+
     if (uploadedContent.length > 0) {
-      console.log(`📊 First uploadedContent sample: ${uploadedContent[0].substring(0, 200)}...`);
+      console.log(
+        `📊 First uploadedContent sample: ${uploadedContent[0].substring(0, 200)}...`,
+      );
     }
 
     // Generate RAG response from combined context
@@ -589,7 +646,7 @@ const uploadAndQuery = async (
     ----------------------------- */
     return res.status(200).json({
       answer: ragResponse.answer,
-      source: ragResponse.source
+      source: ragResponse.source,
     });
   } catch (error) {
     next(error);
@@ -602,7 +659,7 @@ const uploadAndQuery = async (
 const queryDocuments = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const { query } = req.body;
 
@@ -612,18 +669,18 @@ const queryDocuments = async (
     }
 
     console.log(`🔍 Searching for: ${query}`);
-    
+
     // Search existing database
     const relevantContent = await searchSimilarContent(query, 5);
-    
+
     console.log(`📄 Found ${relevantContent.length} relevant chunks`);
-    
+
     // Generate RAG response
     const ragResponse = await generateRAGResponse(query, relevantContent);
-    
+
     return res.status(200).json({
       answer: ragResponse.answer,
-      source: ragResponse.source
+      source: ragResponse.source,
     });
   } catch (error) {
     next(error);
