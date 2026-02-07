@@ -1,11 +1,13 @@
 import Chat from "@/components/chat";
 import Grainient from "@/components/Grainient";
 import MainPlaceholder from "@/components/main-placeholder";
+import Navbar from "@/components/navbar";
 
 
 export default function Home() {
   return (
     <div className="bg-white min-h-screen w-full flex relative z-10">
+        <Navbar />
       <Grainient
         color1="#b8c9ff"
         color2="#6586d2"
