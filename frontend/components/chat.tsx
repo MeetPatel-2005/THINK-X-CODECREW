@@ -37,6 +37,9 @@ const Chat = () => {
     null,
   );
   const [isBotLoading, setIsBotLoading] = useState(false);
+  const [animatingMessageId, setAnimatingMessageId] = useState<string | null>(
+    null,
+  );
 
   const handleSendMessage = async (
     messageText: string,
@@ -91,14 +94,16 @@ const Chat = () => {
 
         const answer = response.data?.answer;
         if (answer) {
+          const newMessageId = `${Date.now()}-${Math.random()}`;
           setMessages((prev) => [
             ...prev,
             {
-              id: `${Date.now()}-${Math.random()}`,
+              id: newMessageId,
               text: answer,
               type: "bot",
             },
           ]);
+          setAnimatingMessageId(newMessageId);
         }
         return;
       }
@@ -109,24 +114,28 @@ const Chat = () => {
 
       const answer = response.data?.answer;
       if (answer) {
+        const newMessageId = `${Date.now()}-${Math.random()}`;
         setMessages((prev) => [
           ...prev,
           {
-            id: `${Date.now()}-${Math.random()}`,
+            id: newMessageId,
             text: answer,
             type: "bot",
           },
         ]);
+        setAnimatingMessageId(newMessageId);
       }
     } catch (error) {
+      const newMessageId = `${Date.now()}-${Math.random()}`;
       setMessages((prev) => [
         ...prev,
         {
-          id: `${Date.now()}-${Math.random()}`,
+          id: newMessageId,
           text: "Sorry, something went wrong while generating a response.",
           type: "bot",
         },
       ]);
+      setAnimatingMessageId(newMessageId);
     } finally {
       setIsBotLoading(false);
     }
@@ -150,59 +159,65 @@ const Chat = () => {
     <LayoutGroup>
       <div className="w-full h-full relative flex flex-col">
         <div className="w-full flex-1 overflow-y-auto scrollbar-hidden flex flex-col justify-end px-4">
-          <motion.div layout
-          className="flex flex-col gap-2">
-          {messages.map((message) => (
-            <motion.div key={message.id} layout>
-              {message.type === "bot" ? (
-                <BotMsg msg={message.text} />
-              ) : (
-                <UserMsg usermsg={message.text} attachment={message.attachment} />
-              )}
-            </motion.div>   
-          ))}
-          {isBotLoading && (
-            <motion.div
-              className="flex gap-1 mb-2"
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: {},
-                visible: {
-                  transition: {
-                    staggerChildren: 0.2,
-                  },
-                },
-              }}
-            >
-              {[0, 1, 2].map((i) => (
-                <motion.div
-                  key={i}
-                  className="bg-blue-500 rounded-full size-2"
-                  variants={{
-                    hidden: { y: 0, opacity: 0.4 },
-                    visible: {
-                      y: [-2, -8, -2],
-                      opacity: [0.4, 1, 0.4],
-                      transition: {
-                        duration: 0.6,
-                        ease: "easeInOut",
-                        repeat: Infinity, // ✅ LOOP HERE
-                        repeatType: "loop", // ✅
-                        repeatDelay: 0.5, // ✅ small pause
-                      },
+          <motion.div layout="position" className="flex flex-col gap-2">
+
+            {messages.map((message) => (
+              <motion.div key={message.id} layout>
+                {message.type === "bot" ? (
+                  <BotMsg
+                    msg={message.text}
+                    isAnimating={animatingMessageId === message.id}
+                  />
+                ) : (
+                  <UserMsg
+                    usermsg={message.text}
+                    attachment={message.attachment}
+                  />
+                )}
+              </motion.div>
+            ))}
+            {isBotLoading && (
+              <motion.div
+                className="flex gap-1 mb-2"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {},
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.2,
                     },
-                  }}
-                />
-              ))}
-            </motion.div>
-          )}
+                  },
+                }}
+              >
+                {[0, 1, 2].map((i) => (
+                  <motion.div
+                    key={i}
+                    className="bg-blue-500 rounded-full size-2"
+                    variants={{
+                      hidden: { y: 0, opacity: 0.4 },
+                      visible: {
+                        y: [-2, -8, -2],
+                        opacity: [0.4, 1, 0.4],
+                        transition: {
+                          duration: 0.6,
+                          ease: "easeInOut",
+                          repeat: Infinity, // ✅ LOOP HERE
+                          repeatType: "loop", // ✅
+                          repeatDelay: 0.5, // ✅ small pause
+                        },
+                      },
+                    }}
+                  />
+                ))}
+              </motion.div>
+            )}
           </motion.div>
         </div>
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout">
           {showFaqs && (
             <motion.div
-              layout
+              layout="position"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 40 }}
@@ -223,7 +238,8 @@ const Chat = () => {
                   {pdfAttachment.name}
                 </p>
                 <p className="text-xs text-zinc-500">
-                  {Math.ceil(pdfAttachment.size / 1024)} KB • {pdfAttachment.type}
+                  {Math.ceil(pdfAttachment.size / 1024)} KB •{" "}
+                  {pdfAttachment.type}
                 </p>
               </div>
             </div>
