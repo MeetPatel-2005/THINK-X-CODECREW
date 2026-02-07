@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG API Upload Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        textarea, input[type="file"] { width: 100%; margin: 10px 0; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .response { background: #f8f9fa; padding: 10px; border-left: 4px solid #007bff; margin: 10px 0; }
+        .error { border-left-color: #dc3545; background: #f8d7da; }
+        .success { border-left-color: #28a745; background: #d4edda; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 RAG API Testing Interface</h1>
+        
+        <!-- Test 1: Query Only -->
+        <div class="test-section">
+            <h3>📋 Test 1: Query Existing Database</h3>
+            <textarea id="query1" placeholder="Enter your query..." rows="2">What are the admission requirements?</textarea>
+            <button onclick="testQueryOnly()">Test Query Only</button>
+            <div id="response1" class="response"></div>
+        </div>
+
+        <!-- Test 2: Upload + Query -->
+        <div class="test-section">
+            <h3>📁📋 Test 2: Upload PDF + Query</h3>
+            <input type="file" id="pdfFile" accept=".pdf" />
+            <textarea id="query2" placeholder="Ask about the uploaded PDF..." rows="2">What is the placement policy?</textarea>
+            <button onclick="testUploadAndQuery()">Upload & Query</button>
+            <div id="response2" class="response"></div>
+        </div>
+
+        <!-- Test 3: Upload Only -->
+        <div class="test-section">
+            <h3>📁 Test 3: Upload PDF Only</h3>
+            <input type="file" id="pdfFile2" accept=".pdf" />
+            <button onclick="testUploadOnly()">Upload Only</button>
+            <div id="response3" class="response"></div>
+        </div>
+
+        <!-- Server Log Monitor -->
+        <div class="test-section">
+            <h3>📊 Server Status</h3>
+            <button onclick="checkServer()">Check Server Status</button>
+            <div id="serverStatus" class="response"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3000';
+
+        async function testQueryOnly() {
+            const query = document.getElementById('query1').value;
+            const responseDiv = document.getElementById('response1');
+            
+            try {
+                responseDiv.innerHTML = '⏳ Querying...';
+                const response = await fetch(`${API_BASE}/api/chat`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+                
+                const result = await response.json();
+                responseDiv.className = 'response success';
+                responseDiv.innerHTML = `
+                    <strong>Answer:</strong> ${result.answer}<br>
+                    <strong>Source:</strong> ${result.source}
+                `;
+            } catch (error) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = `❌ Error: ${error.message}`;
+            }
+        }
+
+        async function testUploadAndQuery() {
+            const fileInput = document.getElementById('pdfFile');
+            const query = document.getElementById('query2').value;
+            const responseDiv = document.getElementById('response2');
+            
+            if (!fileInput.files[0]) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = '❌ Please select a PDF file';
+                return;
+            }
+
+            try {
+                responseDiv.innerHTML = '⏳ Uploading and querying...';
+                const formData = new FormData();
+                formData.append('files', fileInput.files[0]);
+                formData.append('query', query);
+                
+                const response = await fetch(`${API_BASE}/api/files/upload-and-query`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                responseDiv.className = 'response success';
+                responseDiv.innerHTML = `
+                    <strong>Answer:</strong> ${result.answer}<br>
+                    <strong>Source:</strong> ${result.source}
+                `;
+            } catch (error) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = `❌ Error: ${error.message}`;
+            }
+        }
+
+        async function testUploadOnly() {
+            const fileInput = document.getElementById('pdfFile2');
+            const responseDiv = document.getElementById('response3');
+            
+            if (!fileInput.files[0]) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = '❌ Please select a PDF file';
+                return;
+            }
+
+            try {
+                responseDiv.innerHTML = '⏳ Uploading...';
+                const formData = new FormData();
+                formData.append('files', fileInput.files[0]);
+                
+                const response = await fetch(`${API_BASE}/api/files/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                responseDiv.className = 'response success';
+                responseDiv.innerHTML = `✅ Upload successful: ${JSON.stringify(result, null, 2)}`;
+            } catch (error) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = `❌ Error: ${error.message}`;
+            }
+        }
+
+        async function checkServer() {
+            const responseDiv = document.getElementById('serverStatus');
+            try {
+                const response = await fetch(`${API_BASE}/api/chat`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: 'test' })
+                });
+                
+                responseDiv.className = 'response success';
+                responseDiv.innerHTML = `✅ Server is running! Status: ${response.status}`;
+            } catch (error) {
+                responseDiv.className = 'response error';
+                responseDiv.innerHTML = `❌ Server not responding: ${error.message}`;
+            }
+        }
+
+        // Check server on load
+        window.onload = () => checkServer();
+    </script>
+</body>
+</html>
